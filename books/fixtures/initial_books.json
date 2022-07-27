@@ -1,0 +1,38 @@
+[
+    {
+        "model" : "books.Book",
+        "fields" : {
+            "title" : "Beautiful World, Where Are You",
+            "description" : "Alice, a novelist, meets Felix, who works in a warehouse, and asks him if he''d like to travel to Rome with her. In Dublin, her best friend, Eileen, is getting over a break-up and slips back into flirting with Simon, a man she has known since childhood. Alice, Felix, Eileen, and Simon are still young—but life is catching up with them. They desire each other, they delude each other, they get together, they break apart. They have sex, they worry about sex, they worry about their friendships and the world they live in. Are they standing in the last lighted room before the darkness, bearing witness to something? Will they find a way to believe in a beautiful world?",
+            "rating" : 3.6,
+            "genre" : "Romance",
+            "numberofpages" : 356,
+            "willingtoshare" : "True",
+            "author" : "b0c1ff3a-1995-48a6-b82e-211b131ed09f"
+        }
+    },
+    {
+        "model" : "books.Book",
+        "fields" : {
+            "title" : "Dial for Aunties",
+            "description" : "When Meddelin Chan ends up accidentally killing her blind date, her meddlesome mother calls for her even more meddlesome aunties to help get rid of the body. Unfortunately, a dead body proves to be a lot more challenging to dispose of than one might anticipate, especially when it is inadvertently shipped in a cake cooler to the over-the-top billionaire wedding Meddy, her Ma, and aunties are working at an island resort on the California coastline. It's the biggest job yet for the family wedding business—'Don't leave your big day to chance, leave it to the Chans!'—and nothing, not even an unsavory corpse, will get in the way of her auntie's perfect buttercream flowers. But things go from inconvenient to downright torturous when Meddy's great college love—and biggest heartbreak—makes a surprise appearance amid the wedding chaos. Is it possible to escape murder charges, charm her ex back into her life, and pull off a stunning wedding all in one weekend?",
+            "rating" : 3.77,
+            "genre" : "Chick-lit",
+            "numberofpages" : 299,
+            "willingtoshare" : "True",
+            "author" : "ed9ee40d-69bc-46e8-9f28-d7d671227fba"
+        }
+    },
+    {
+        "model" : "books.Book",
+        "fields" : {
+            "title" : "The Paper Palace",
+            "description" : "It is a perfect July morning, and Elle, a fifty-year-old happily married mother of three, awakens at 'The Paper Palace'--the family summer place which she has visited every summer of her life. But this morning is different: last night Elle and her oldest friend Jonas crept out the back door into the darkness and had sex with each other for the first time, all while their spouses chatted away inside. Now, over the next twenty-four hours, Elle will have to decide between the life she has made with her genuinely beloved husband, Peter, and the life she always imagined she would have had with her childhood love, Jonas, if a tragic event hadn't forever changed the course of their lives.",
+            "rating" : 3.88,
+            "genre" : "Romance",
+            "numberofpages" : 400,
+            "willingtoshare" : "True",
+            "author" : "604a0cb8-056e-4bc0-9941-6c0a90e8d403"
+        }
+    }
+]

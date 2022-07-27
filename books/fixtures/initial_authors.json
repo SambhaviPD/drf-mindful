@@ -1,0 +1,38 @@
+[
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Adam Grant"
+        }
+    },
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Sally Rooney"
+        }
+    },
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Laura Dave"
+        }
+    },
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Sarah J.Mass"
+        }
+    },
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Jesse Q. Sutanto"
+        }
+    },
+    {
+        "model" : "books.Author",
+        "fields" : {
+            "name" : "Sarah J.Mass"
+        }
+    }
+]
