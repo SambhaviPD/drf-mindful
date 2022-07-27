@@ -37,7 +37,7 @@ class Book(models.Model):
         default='OTHER')
     numberofpages = models.PositiveSmallIntegerField()
     willingtoshare = models.BooleanField(default=True)
-    author = models.ForeignKey('Author', on_delete=models.CASCADE)
+    author = models.ManyToManyField(Author)
 
     def __str__(self):
         return f"{self.title + ' written by ' + self.author}"

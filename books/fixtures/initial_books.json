@@ -8,7 +8,9 @@
             "genre" : "Romance",
             "numberofpages" : 356,
             "willingtoshare" : "True",
-            "author" : "b0c1ff3a-1995-48a6-b82e-211b131ed09f"
+            "author" : [
+                "251c9d3f-4ff9-455a-9fbe-ebe2cf83448f"
+            ]
         }
     },
     {
@@ -20,7 +22,9 @@
             "genre" : "Chick-lit",
             "numberofpages" : 299,
             "willingtoshare" : "True",
-            "author" : "ed9ee40d-69bc-46e8-9f28-d7d671227fba"
+            "author" : [
+                "7b8cf7ea-51f4-409f-b2f8-251c4c00c7f8"
+            ]
         }
     },
     {
@@ -32,7 +36,9 @@
             "genre" : "Romance",
             "numberofpages" : 400,
             "willingtoshare" : "True",
-            "author" : "604a0cb8-056e-4bc0-9941-6c0a90e8d403"
+            "author" : [
+                "604a0cb8-056e-4bc0-9941-6c0a90e8d403"
+            ]
         }
     }
 ]
