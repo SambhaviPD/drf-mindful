@@ -154,3 +154,45 @@ def test_partial_update_book_detail():
 
     assert response.status_code == status.HTTP_200_OK
     assert response.data["numberofpages"] == 420
+
+@pytest.mark.django_db
+def test_partial_update_incorrect_book_detail():
+
+    author = Author.objects.create(name="Sarah Morgan")
+
+    book = Book.objects.create(
+        title="Beach House Summer", \
+        description="When Joanna Whitman's famous ex-husband dies in a car accident, she doesn't know what to feel. Their dysfunctional marriage held more painful secrets than she cares to remember. But when she discovers that the young woman with him in the crash is pregnant, Joanna feels compelled to act, knowing exactly how brutal the media spotlight will be on celebrity chef Cliff Whitman's ex-wife and his mysterious female friend.", \
+        rating=4.10, \
+        genre="Romance", \
+        numberofpages=417, \
+        willingtoshare=True
+    )
+
+    book.author.add(author)
+
+    url = reverse("book", args=[book.id])
+
+    data = {
+        "numberofpagesssss" : 420,
+    }
+
+    client = APIClient()
+
+    response = client.patch(url, data=data, format="json")
+
+    assert response.status_code == status.HTTP_200_OK
+
+# DELETE
+@pytest.mark.django_db
+def test_delete_author():
+    author = Author.objects.create(name="Jess Owens")
+
+    url = reverse("author", args=[author.id])
+
+    client = APIClient()
+
+    response = client.delete(url)
+
+    assert response.status_code == status.HTTP_204_NO_CONTENT
+    assert len(Author.objects.all()) == 0
