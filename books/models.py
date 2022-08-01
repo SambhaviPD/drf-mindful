@@ -40,4 +40,4 @@ class Book(models.Model):
     author = models.ManyToManyField(Author)
 
     def __str__(self):
-        return f"{self.title + ' written by ' + self.author}"
+        return f"{self.title}"
