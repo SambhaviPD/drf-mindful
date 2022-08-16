@@ -1,4 +1,4 @@
-import json
+from venv import create
 import pytest
 from django.urls import reverse
 from rest_framework import status
@@ -10,32 +10,33 @@ from books.models import Author, Book
 
 # CREATE AUTHOR
 @pytest.mark.django_db
-def test_is_valid_author_is_created():
+def test_is_valid_author_is_created(create_user, create_authenticated_client):
     url = reverse('authors')
     data = {
         "name" : "Yann Martel",
     }
-    client = APIClient()
+    client = create_authenticated_client(create_user())
     response = client.post(url, data, format='json')
 
     assert response.status_code == status.HTTP_201_CREATED
     assert Author.objects.get().name == "Yann Martel"
 
 # MISSING AUTHOR NAME
-def test_author_name_missing_returns_bad_request():
+@pytest.mark.django_db
+def test_author_name_missing_returns_bad_request(create_user, create_authenticated_client):
     url = reverse("authors")
     data = {
         "country" : "Ireland"
     }
-    client = APIClient()
+    client = create_authenticated_client(create_user())
     response = client.post(url, data, format='json')
 
     assert response.status_code == status.HTTP_400_BAD_REQUEST
 
 # RETRIEVE
 @pytest.mark.django_db
-def test_is_valid_author_returned():
-    author = Author.objects.create(name="Margaret Atwood")
+def test_is_valid_author_returned(create_user):
+    author = Author.objects.create(name="Margaret Atwood", addedBy=create_user())
     url = reverse("author", args=[author.id])
 
     client = APIClient()
@@ -196,3 +197,4 @@ def test_delete_author():
 
     assert response.status_code == status.HTTP_204_NO_CONTENT
     assert len(Author.objects.all()) == 0
+
